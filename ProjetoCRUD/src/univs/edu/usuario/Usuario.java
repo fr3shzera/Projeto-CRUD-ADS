@@ -1,16 +1,24 @@
 
 package univs.edu.usuario;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+@Entity
 public class Usuario {
-    
+    @Id
+    @GeneratedValue   
 public int idUsuario;
+    
+@Column(length = 100, nullable = false)
+private String nomeUsuario;
 
-public String nomeUsuario;
+@Column(length = 100, nullable = false, unique = true)
+private String login;
 
-public String login;
-
-public String senha;
+private String senha;
 
     
     public int getIdUsuario() {
