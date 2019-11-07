@@ -10,7 +10,8 @@ import javax.persistence.Id;
 public class Usuario {
     @Id
     @GeneratedValue   
-public int idUsuario;
+private int idUsuario;
+   
     
 @Column(length = 100, nullable = false)
 private String nomeUsuario;
